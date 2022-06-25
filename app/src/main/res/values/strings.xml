@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">فروشگاه کتاب</string>
+    <string name="online_book_store">فروشگاه آنلاین کتاب</string>
+    <string name="home">خانه</string>
+    <string name="categories">دسته بندی ها</string>
+    <string name="search">جست و جو</string>
+    <string name="profile">حساب من</string>
+    <string name="books">کتاب ها</string>
+    <string name="cart">سبد خرید</string>
+    <string name="login_activity_toolbar">ورود</string>
+    <string name="login_card_header">در صورتی که حساب کاربری ندارید ، بر روی ساخت حساب کاربری جدید کلیک کنید</string>
+    <string name="username">نام کاربری</string>
+    <string name="password">رمز عبور</string>
+    <string name="login_btn">ورود به حساب کاربری</string>
+    <string name="new_account">ساخت حساب کاربری جدید</string>
+    <string name="signUp">ثبت نام</string>
+    <string name="register_card_header">در صورتی که حساب کاربری دارید ، بر روی ورود به حساب کاربری  کلیک کنید</string>
+    <string name="register_btn">ثبت نام</string>
+    <string name="mail">ایمیل</string>
+    <string name="phone">تلفن همراه</string>
+    <string name="home_fragment_news_head">"جدیدترین محصولات فروشگاه  : "</string>
+    <string name="toman">تومان</string>
+    <string name="show_all">مشاهده همه</string>
+    <string name="top_publishers">برترین انتشارات  فروشگاه  :</string>
+    <string name="name">نام</string>
+    <string name="lastname">نام خانوادگی</string>
+    <string name="seller">فروشنده</string>
+    <string name="customer">مشتری</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="receiverInfo">اطلاعات گیرنده</string>
+    <string name="address">آدرس</string>
+    <string name="postalCode">کد پستی</string>
+    <string name="bookInfo">اطلاعات کتاب</string>
+    <string name="addToCart">اضافه به سبد</string>
+    <string name="description">توضیحات</string>
+    <string name="bookName">نام کتاب</string>
+    <string name="author">نویسنده</string>
+    <string name="category">دسته بندی</string>
+    <string name="pageCount">تعداد صفحات</string>
+    <string name="relatedBooks">کتاب های مشابه</string>
+    <string name="comments">نظرات کاربران</string>
+    <string name="showAll"><![CDATA[مشاهده همه >]]></string>
+    <string name="sendComment">ثبت نظر</string>
+    <string name="sendCommentGuide">نظر خود را بنویسید</string>
+    <string name="userInfo">اطلاعات حساب کاربری</string>
+    <string name="save">ذخیره</string>
+    <string name="lastPassword">رمزعبور قبلی</string>
+    <string name="newPassword">رمزعبور جدید</string>
+
+
+</resources>

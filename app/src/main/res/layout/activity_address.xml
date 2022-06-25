@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/receiverInfo"
+                android:textAppearance="?textAppearanceHeadline5" />
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="12dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appBarLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/etFirstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext"
+                android:drawableStart="@drawable/person"
+                android:drawablePadding="8dp"
+                android:hint="@string/name" />
+
+            <EditText
+                android:id="@+id/etLastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etFirstname"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edittext"
+                android:drawableStart="@drawable/person"
+                android:drawablePadding="8dp"
+                android:hint="@string/lastname" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etLastname"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_edittext"
+                android:drawableStart="@drawable/phone"
+                android:drawablePadding="8dp"
+                android:gravity="right"
+                android:hint="@string/phone"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etPhone"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_edittext"
+                android:drawableStart="@drawable/ic_baseline_my_location_24"
+                android:drawablePadding="8dp"
+                android:hint="@string/address"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/etPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etAddress"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_edittext"
+                android:drawableStart="@drawable/ic_baseline_local_post_office_24"
+                android:drawablePadding="8dp"
+                android:hint="@string/postalCode"
+                android:inputType="number" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:text="پرداخت و تکمیل خرید" />
+
+</RelativeLayout>
