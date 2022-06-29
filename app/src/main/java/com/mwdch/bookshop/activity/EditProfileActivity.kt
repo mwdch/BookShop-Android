@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.JsonObject
 import com.mwdch.bookshop.ApiService
+import com.mwdch.bookshop.R
 import com.mwdch.bookshop.UserManager
 import com.mwdch.bookshop.databinding.ActivityProfileEditBinding
 import io.reactivex.CompletableObserver
@@ -102,7 +103,11 @@ class EditProfileActivity : AppCompatActivity() {
                         }
 
                         override fun onError(e: Throwable) {
-
+                            Toast.makeText(
+                                this@EditProfileActivity,
+                                getString(R.string.noConnection),
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
                     })
             }

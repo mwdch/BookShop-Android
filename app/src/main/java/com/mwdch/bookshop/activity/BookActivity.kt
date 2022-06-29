@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.google.gson.JsonObject
 import com.mcdev.quantitizerlibrary.AnimationStyle
 import com.mwdch.bookshop.ApiService
+import com.mwdch.bookshop.R
 import com.mwdch.bookshop.UserManager
 import com.mwdch.bookshop.adapter.BookHomeAdapter
 import com.mwdch.bookshop.adapter.LimitedCommentAdapter
@@ -72,7 +73,11 @@ class BookActivity : AppCompatActivity(), BookHomeAdapter.OnBookListener {
                 }
 
                 override fun onError(e: Throwable) {
-                    Toast.makeText(this@BookActivity, e.toString(), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this@BookActivity,
+                        getString(R.string.noConnection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
 
             })
@@ -95,7 +100,7 @@ class BookActivity : AppCompatActivity(), BookHomeAdapter.OnBookListener {
                 }
 
                 override fun onError(e: Throwable) {
-                    Toast.makeText(this@BookActivity, e.toString(), Toast.LENGTH_SHORT).show()
+
                 }
 
             })
@@ -128,7 +133,7 @@ class BookActivity : AppCompatActivity(), BookHomeAdapter.OnBookListener {
                     }
 
                     override fun onError(e: Throwable) {
-                        Toast.makeText(this@BookActivity, e.toString(), Toast.LENGTH_SHORT).show()
+
                     }
                 })
         }

@@ -26,7 +26,8 @@ class CartBottomSheetDialog : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val decimalFormat = DecimalFormat("###,###")
-        binding.tvTotalPrice.text = decimalFormat.format(requireArguments().getString("totalPrice")?.toInt())
+        binding.tvTotalPrice.text =
+            decimalFormat.format(requireArguments().getString("totalPrice")?.toInt())
         binding.tvBookCount.text = requireArguments().getString("bookCount")
 
         binding.btnGoToNext.setOnClickListener {

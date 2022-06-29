@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.mwdch.bookshop.ApiService
+import com.mwdch.bookshop.R
 import com.mwdch.bookshop.UserManager
 import com.mwdch.bookshop.databinding.ActivityAddressBinding
 import com.mwdch.bookshop.model.Book
@@ -52,10 +53,9 @@ class AddressActivity : AppCompatActivity() {
                     override fun onError(e: Throwable) {
                         Toast.makeText(
                             this@AddressActivity,
-                            e.toString(),
+                            getString(R.string.noConnection),
                             Toast.LENGTH_SHORT
-                        )
-                            .show()
+                        ).show()
                     }
 
                 })

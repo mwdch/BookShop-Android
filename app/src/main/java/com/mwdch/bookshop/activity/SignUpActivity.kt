@@ -5,7 +5,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.JsonObject
 import com.mwdch.bookshop.ApiService
-import com.mwdch.bookshop.R
 import com.mwdch.bookshop.Response
 import com.mwdch.bookshop.databinding.ActivitySignUpBinding
 import io.reactivex.SingleObserver
@@ -13,7 +12,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_sign_up.*
 import org.koin.android.ext.android.inject
 
 class SignUpActivity : AppCompatActivity() {
@@ -67,7 +65,7 @@ class SignUpActivity : AppCompatActivity() {
                         override fun onError(e: Throwable) {
                             Toast.makeText(
                                 this@SignUpActivity,
-                                "نشد",
+                                "ثبت نام انجام نشد",
                                 Toast.LENGTH_SHORT
                             ).show()
                         }

@@ -3,9 +3,7 @@ package com.mwdch.bookshop.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.mwdch.bookshop.databinding.ItemLimitedCommentBinding
-import com.mwdch.bookshop.model.Category
 import com.mwdch.bookshop.model.Comment
 
 class LimitedCommentAdapter :

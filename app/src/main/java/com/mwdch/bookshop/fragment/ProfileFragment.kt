@@ -8,10 +8,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.mwdch.bookshop.ApiService
+import com.mwdch.bookshop.R
 import com.mwdch.bookshop.TokenContainer
 import com.mwdch.bookshop.UserManager
 import com.mwdch.bookshop.activity.EditProfileActivity
 import com.mwdch.bookshop.activity.LoginActivity
+import com.mwdch.bookshop.activity.OrderActivity
 import com.mwdch.bookshop.activity.QuestionActivity
 import com.mwdch.bookshop.databinding.FragmentProfileBinding
 import com.mwdch.bookshop.model.User
@@ -59,7 +61,11 @@ class ProfileFragment : Fragment() {
                 }
 
                 override fun onError(e: Throwable) {
-                    Toast.makeText(requireContext(), e.toString(), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        getString(R.string.noConnection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             })
 
@@ -73,11 +79,11 @@ class ProfileFragment : Fragment() {
         binding.layoutQuestion.setOnClickListener {
             startActivity(Intent(requireContext(), QuestionActivity::class.java))
         }
-//
+
         binding.layoutOrders.setOnClickListener {
-//            startActivity(
-//                Intent(requireContext(), OrderActivity::class.java)
-//            )
+            startActivity(
+                Intent(requireContext(), OrderActivity::class.java)
+            )
         }
 
         binding.layoutInfo.setOnClickListener {
@@ -86,9 +92,6 @@ class ProfileFragment : Fragment() {
             )
         }
 
-        binding.ivSetting.setOnClickListener {
-
-        }
     }
 
     override fun onStop() {

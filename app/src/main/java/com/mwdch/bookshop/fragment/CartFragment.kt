@@ -9,10 +9,10 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mwdch.bookshop.ApiService
+import com.mwdch.bookshop.R
 import com.mwdch.bookshop.UserManager
 import com.mwdch.bookshop.activity.AddressActivity
 import com.mwdch.bookshop.activity.BookActivity
-import com.mwdch.bookshop.adapter.AllBookAdapter
 import com.mwdch.bookshop.adapter.CartAdapter
 import com.mwdch.bookshop.databinding.FragmentCartBinding
 import com.mwdch.bookshop.model.Book
@@ -76,17 +76,28 @@ class CartFragment : Fragment(), CartAdapter.OnBookListener,
                 }
 
                 override fun onSuccess(t: List<Cart>) {
-                    cartAdapter?.setBookList(t)
                     binding.progressBar.visibility = View.GONE
                     binding.parent.visibility = View.VISIBLE
-                    t.forEach { cart ->
-                        totalPrice += cart.book.price * cart.quantity
-                        bookCount += cart.quantity
+
+                    if (t.isNotEmpty()) {
+                        cartAdapter?.setBookList(t)
+                        t.forEach { cart ->
+                            totalPrice += cart.book.price * cart.quantity
+                            bookCount += cart.quantity
+                        }
+                    } else {
+                        binding.rvBooks.visibility = View.GONE
+                        binding.btnGoNext.visibility = View.GONE
+                        binding.tvEmptyState.visibility = View.VISIBLE
                     }
                 }
 
                 override fun onError(e: Throwable) {
-                    Toast.makeText(requireContext(), e.toString(), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        getString(R.string.noConnection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
 
             })

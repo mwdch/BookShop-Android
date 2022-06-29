@@ -19,6 +19,7 @@
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/drawable/profile_selector.xml" value="0.1055" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/drawable/search.xml" value="0.1055" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/drawable/shopping_cart.xml" value="0.1055" />
+        <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/drawable/shopping_cart2.xml" value="0.103" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/activity_address.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/activity_book.xml" value="0.33" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/activity_comment.xml" value="0.20677083333333332" />
@@ -26,6 +27,7 @@
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/activity_home.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/activity_main.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/activity_order.xml" value="0.22" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/activity_profile_edit.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/activity_question.xml" value="0.33" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/activity_search.xml" value="0.33" />
@@ -44,6 +46,8 @@
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/item_category.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/item_comment_limit.xml" value="0.22" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/item_limited_comment.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/item_order.xml" value="0.22" />
+        <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/item_order_book.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/item_question.xml" value="0.22" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/item_slider.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/Mohammad/AndroidStudioProjects/BookShop/app/src/main/res/layout/layout_bottom_sheet_cart.xml" value="0.33" />

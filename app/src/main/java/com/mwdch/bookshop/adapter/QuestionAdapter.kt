@@ -57,7 +57,6 @@ class QuestionAdapter : RecyclerView.Adapter<QuestionAdapter.Holder>() {
                     )
                 }
             }
-
         }
     }
 }

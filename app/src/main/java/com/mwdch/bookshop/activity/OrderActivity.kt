@@ -1,6 +1,5 @@
 package com.mwdch.bookshop.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -8,10 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mwdch.bookshop.ApiService
 import com.mwdch.bookshop.R
-import com.mwdch.bookshop.adapter.AllBookAdapter
-import com.mwdch.bookshop.databinding.ActivityDetailCategoryBinding
-import com.mwdch.bookshop.model.Book
-import com.mwdch.bookshop.model.Category
+import com.mwdch.bookshop.UserManager
+import com.mwdch.bookshop.adapter.OrderAdapter
+import com.mwdch.bookshop.databinding.ActivityOrderBinding
+import com.mwdch.bookshop.model.Order
 import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -19,57 +18,52 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import org.koin.android.ext.android.inject
 
-class DetailCategoryActivity : AppCompatActivity(), AllBookAdapter.OnBookListener {
-
-    private lateinit var binding: ActivityDetailCategoryBinding
+class OrderActivity : AppCompatActivity() {
 
     private val apiService: ApiService by inject()
+    private val userManager: UserManager by inject()
     private val compositeDisposable = CompositeDisposable()
 
-    private var allBookAdapter: AllBookAdapter? = null
+    private var orderAdapter: OrderAdapter? = null
 
-    private lateinit var category: Category
+    private lateinit var binding: ActivityOrderBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDetailCategoryBinding.inflate(layoutInflater)
+        binding = ActivityOrderBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        category = intent.getParcelableExtra<Category>("data") as Category
-
-        binding.tvCategory.text = category.name
 
         binding.ivBack.setOnClickListener {
             finish()
         }
 
-        allBookAdapter = AllBookAdapter(this, this)
-        binding.rvBooks.layoutManager =
+        orderAdapter = OrderAdapter(this)
+        binding.rvOrders.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        binding.rvBooks.adapter = allBookAdapter
+        binding.rvOrders.adapter = orderAdapter
 
-        apiService.getBooksByCategory(category.id)
+        apiService.getOrders(userManager.getUserInfo().id)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(object : SingleObserver<List<Book>> {
+            .subscribe(object : SingleObserver<List<Order>> {
                 override fun onSubscribe(d: Disposable) {
                     compositeDisposable.add(d)
                 }
 
-                override fun onSuccess(t: List<Book>) {
+                override fun onSuccess(t: List<Order>) {
                     binding.progressBar.visibility = View.GONE
                     binding.parent.visibility = View.VISIBLE
                     if (t.isNotEmpty()) {
-                        allBookAdapter?.setBookList(t)
+                        orderAdapter?.setBookList(t)
                     } else {
-                        binding.rvBooks.visibility = View.GONE
+                        binding.rvOrders.visibility = View.GONE
                         binding.tvEmptyState.visibility = View.VISIBLE
                     }
                 }
 
                 override fun onError(e: Throwable) {
                     Toast.makeText(
-                        this@DetailCategoryActivity,
+                        this@OrderActivity,
                         getString(R.string.noConnection),
                         Toast.LENGTH_SHORT
                     ).show()
@@ -78,9 +72,4 @@ class DetailCategoryActivity : AppCompatActivity(), AllBookAdapter.OnBookListene
             })
     }
 
-    override fun onBookClick(book: Book) {
-        startActivity(Intent(this, BookActivity::class.java).apply {
-            putExtra("data", book)
-        })
-    }
 }

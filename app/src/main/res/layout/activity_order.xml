@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="rtl">
+    android:layoutDirection="rtl"
+    tools:context=".activity.OrderActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -22,8 +23,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/cart"
+                android:text="@string/orders"
                 android:textAppearance="?textAppearanceHeadline5" />
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="12dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
         </FrameLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -35,30 +46,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        tools:visibility="visible">
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvBooks"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/btnGoNext"
+            android:id="@+id/rvOrders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnGoNext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="مرحله بعد"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tvEmptyState"

@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookShop">
         <activity
+            android:name=".activity.OrderActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.SearchActivity"
             android:exported="false" />
         <activity

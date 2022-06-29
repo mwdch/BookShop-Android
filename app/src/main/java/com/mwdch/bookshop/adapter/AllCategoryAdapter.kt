@@ -32,7 +32,6 @@ class AllCategoryAdapter(
         notifyDataSetChanged()
     }
 
-
     inner class Holder(private val binding: ItemAllCategoryBinding) :
         RecyclerView.ViewHolder(binding.root) {
 

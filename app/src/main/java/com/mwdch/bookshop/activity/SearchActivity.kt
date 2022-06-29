@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mwdch.bookshop.ApiService
+import com.mwdch.bookshop.R
 import com.mwdch.bookshop.adapter.AllBookAdapter
 import com.mwdch.bookshop.databinding.ActivitySearchBinding
 import com.mwdch.bookshop.model.Book
@@ -69,7 +70,7 @@ class SearchActivity : AppCompatActivity(), AllBookAdapter.OnBookListener {
                             override fun onError(e: Throwable) {
                                 Toast.makeText(
                                     this@SearchActivity,
-                                    e.toString(),
+                                    getString(R.string.noConnection),
                                     Toast.LENGTH_SHORT
                                 ).show()
                             }

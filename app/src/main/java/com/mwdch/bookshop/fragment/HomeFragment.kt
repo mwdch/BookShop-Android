@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
 import com.mwdch.bookshop.ApiService
+import com.mwdch.bookshop.R
 import com.mwdch.bookshop.activity.BookActivity
 import com.mwdch.bookshop.activity.DetailCategoryActivity
 import com.mwdch.bookshop.activity.SearchActivity
@@ -72,7 +73,7 @@ class HomeFragment : Fragment(), CategoryAdapter.OnCategoryListener,
                 }
 
                 override fun onError(e: Throwable) {
-                    Toast.makeText(requireContext(), e.toString(), Toast.LENGTH_SHORT).show()
+
                 }
 
             })
@@ -96,7 +97,7 @@ class HomeFragment : Fragment(), CategoryAdapter.OnCategoryListener,
                 }
 
                 override fun onError(e: Throwable) {
-                    Toast.makeText(requireContext(), e.toString(), Toast.LENGTH_SHORT).show()
+
                 }
 
             })
@@ -122,7 +123,11 @@ class HomeFragment : Fragment(), CategoryAdapter.OnCategoryListener,
                 }
 
                 override fun onError(e: Throwable) {
-                    Toast.makeText(requireContext(), e.toString(), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        getString(R.string.noConnection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
 
             })

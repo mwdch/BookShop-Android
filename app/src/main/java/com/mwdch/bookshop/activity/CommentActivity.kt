@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.JsonObject
 import com.mwdch.bookshop.ApiService
+import com.mwdch.bookshop.R
 import com.mwdch.bookshop.UserManager
 import com.mwdch.bookshop.adapter.LimitedCommentAdapter
 import com.mwdch.bookshop.databinding.ActivityCommentBinding
@@ -63,7 +64,11 @@ class CommentActivity : AppCompatActivity() {
                 }
 
                 override fun onError(e: Throwable) {
-                    Toast.makeText(this@CommentActivity, e.toString(), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this@CommentActivity,
+                        getString(R.string.noConnection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
 
             })
@@ -90,8 +95,11 @@ class CommentActivity : AppCompatActivity() {
                         }
 
                         override fun onError(e: Throwable) {
-                            Toast.makeText(this@CommentActivity, e.toString(), Toast.LENGTH_SHORT)
-                                .show()
+                            Toast.makeText(
+                                this@CommentActivity,
+                                getString(R.string.noConnection),
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
 
                     })

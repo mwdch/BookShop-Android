@@ -57,6 +57,9 @@ interface ApiService {
     @GET("orders/{customerId}")
     fun getCartBooks(@Path("customerId") customerId: String): Single<List<Cart>>
 
+    @GET("orders/customer/{customerId}")
+    fun getOrders(@Path("customerId") customerId: String): Single<List<Order>>
+
     @POST("orders")
     fun addToCart(
         @Body jsonObject: JsonObject

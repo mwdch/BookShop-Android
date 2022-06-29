@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mwdch.bookshop.databinding.ItemBookAllBinding
-import com.mwdch.bookshop.databinding.ItemBookHomeBinding
 import com.mwdch.bookshop.model.Book
 import java.text.DecimalFormat
 

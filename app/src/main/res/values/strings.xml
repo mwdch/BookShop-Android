@@ -48,6 +48,8 @@
     <string name="save">ذخیره</string>
     <string name="lastPassword">رمزعبور قبلی</string>
     <string name="newPassword">رمزعبور جدید</string>
-
+    <string name="noConnection">اتصال برقرار نشد</string>
+    <string name="emptyState">چیزی برای نمایش وجود ندارد</string>
+    <string name="orders">سفارشات</string>
 
 </resources>

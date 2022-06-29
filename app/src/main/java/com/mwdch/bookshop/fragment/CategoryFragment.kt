@@ -5,9 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.mwdch.bookshop.ApiService
+import com.mwdch.bookshop.R
 import com.mwdch.bookshop.activity.DetailCategoryActivity
 import com.mwdch.bookshop.adapter.AllCategoryAdapter
 import com.mwdch.bookshop.databinding.FragmentCategoryBinding
@@ -60,7 +62,11 @@ class CategoryFragment : Fragment(), AllCategoryAdapter.OnAllCategoryListener {
                 }
 
                 override fun onError(e: Throwable) {
-
+                    Toast.makeText(
+                        requireContext(),
+                        getString(R.string.noConnection),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
 
             })

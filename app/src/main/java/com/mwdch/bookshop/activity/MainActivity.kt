@@ -2,7 +2,6 @@ package com.mwdch.bookshop.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import com.mwdch.bookshop.R
 import com.mwdch.bookshop.databinding.ActivityHomeBinding
 import com.mwdch.bookshop.fragment.CartFragment
