@@ -18,7 +18,7 @@ class QuestionActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.ivBack.setOnClickListener {
-            onBackPressed()
+            finish()
         }
 
         val questions = mutableListOf<Question>()

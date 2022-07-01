@@ -28,6 +28,10 @@ class EditProfileActivity : AppCompatActivity() {
         binding = ActivityProfileEditBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.ivBack.setOnClickListener {
+            finish()
+        }
+
         val user = userManager.getUserInfo()
         binding.etFirstname.setText(user.firstname)
         binding.etLastname.setText(user.lastname)

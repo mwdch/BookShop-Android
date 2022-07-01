@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.JsonObject
 import com.mwdch.bookshop.ApiService
 import com.mwdch.bookshop.TokenContainer
-import com.mwdch.bookshop.TokenResponse
+import com.mwdch.bookshop.model.TokenResponse
 import com.mwdch.bookshop.UserManager
 import com.mwdch.bookshop.databinding.ActivityLoginBinding
 import io.reactivex.SingleObserver

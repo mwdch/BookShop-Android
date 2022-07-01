@@ -81,15 +81,11 @@ class ProfileFragment : Fragment() {
         }
 
         binding.layoutOrders.setOnClickListener {
-            startActivity(
-                Intent(requireContext(), OrderActivity::class.java)
-            )
+            startActivity(Intent(requireContext(), OrderActivity::class.java))
         }
 
         binding.layoutInfo.setOnClickListener {
-            startActivity(
-                Intent(requireContext(), EditProfileActivity::class.java)
-            )
+            startActivity(Intent(requireContext(), EditProfileActivity::class.java))
         }
 
     }
